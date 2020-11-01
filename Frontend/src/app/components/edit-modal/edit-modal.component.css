@@ -1,0 +1,54 @@
+.addmodal{
+    padding: 0px 20px 20px 20px;
+    margin-top: 10px;
+    text-align: center;
+    border: 1px solid black;
+    width: 30vw;
+    border-radius: 2px;
+}
+
+.formdiv{
+    text-align: left;
+
+}
+
+
+.floatdiv{
+    margin-top: 10px;
+}
+
+.btndiv{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.text-danger{
+    color: red;
+}
+
+.bton{
+    padding: 5px 15px 5px 15px;
+    background-color: whitesmoke;
+    color: black;
+
+
+}
+.bton:hover{
+    cursor: pointer;
+    background-color: skyblue;
+}
+
+.headerDiv{
+    padding-top: 10px;
+    background-color: rgb(168, 168, 168);
+    color: black;
+}
+
+
+@media only screen and (max-width: 600px){
+    .addmodal{
+        width: auto;
+    }
+} 

@@ -1,0 +1,50 @@
+<div class="addmodal">
+    <div class="headerDiv">
+        <h2>Edit Person</h2>
+        <hr>
+    </div>
+    <div class="formdiv">
+        <form [formGroup]="edit_Person" #addForm="ngForm"><br>
+            <label for="name">Enter Name : </label><br>
+            <input type="text" id="name" formControlName="_name" required><br>
+            <div *ngIf="name.errors">
+                <small *ngIf="name.errors?.required && name.touched" class="text-danger">
+                    Email is required
+                </small>
+            </div><br><br>
+            <label for="age">Age : </label><br>
+            <input type="number" id="age" formControlName="_age" required><br>
+            <div *ngIf="age.errors">
+                <small *ngIf="age.errors?.required && age.touched" class="text-danger">
+                    Age is required
+                </small>
+            </div><br><br>
+
+            <label for="gender">Gender : </label><br>
+
+            <input type="radio" id="male" formControlName="_gender" value="Male" required>
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" formControlName="_gender" value="Female" required>
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" formControlName="_gender" value="Other" required>
+            <label for="other">Other</label><br><br>
+
+            <label for="mno">Mobile No : </label><br>
+            <input type="number" id="mno" pattern="[9|8|7]{1}[0-9]{9}" formControlName="_mno" required><br>
+            <div *ngIf="mno.errors">
+                <small *ngIf="mno.errors?.required && mno.touched" class="text-danger">
+                    Mobile number is required
+                </small>
+                <small *ngIf="mno.errors?.pattern && mno.touched" class="text-danger">
+                    Mobile number must be start from 9 or 8 or 7 & total length 10digit
+                </small>
+            </div><br><br>
+
+            <div class="btndiv">
+                <input type="submit" value="Submit" [disabled]="addForm.form.invalid" (click)="onUpdate()">
+                <input type="button" value="Reset" (click)="reset()">
+                <input type="button" value="Back" [routerLink]="['']">
+            </div><br>
+        </form>
+    </div>
+</div>

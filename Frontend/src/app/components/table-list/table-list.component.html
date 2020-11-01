@@ -1,0 +1,42 @@
+<div class="maindiv" *ngIf="! isEmpty" >
+    <table >
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Mobile No</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+
+        </thead>
+        <tbody *ngFor="let i of finalData">
+            <tr>
+                <td>
+                    {{i.name}}
+                </td>
+                <td>
+                    {{i.age}}
+                </td>
+                <td>
+                    {{i.gender}}
+                </td>
+                <td>
+                    {{i.mno}}
+                </td>
+                <td>
+                    <input type="button" class="bton" value="Edit" id={{i.id}} #edit (click)="editing(i)">
+                </td>
+                <td>
+                    <input type="button" value="Delete" class="bton" id={{i.id}} #del (click)="deleting(del.id)">
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+
+<div *ngIf="isEmpty">
+    <h1>NO DATA AVAILABLE</h1>
+</div>

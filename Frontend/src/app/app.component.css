@@ -1,0 +1,28 @@
+.head{
+    background-color: rgb(168, 168, 168);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.head h1{
+    font-size: 1cm;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.add{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.box{
+    padding: 10px;
+    color: skyblue;
+    border: 1px dotted black;
+    
+}
+
